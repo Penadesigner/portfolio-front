@@ -1,10 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <navbar/>
   <router-view/>
+  <Footer/>
 </template>
+
+<script>
+import Footer from './components/Footer.vue'
+import Navbar from './components/Navbar.vue'
+export default {
+  components: { Footer, Navbar },
+  name: 'App'
+}
+</script>
 
 <style>
 #app {
@@ -13,6 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: rgb(214, 214, 214);
 }
 
 nav {
